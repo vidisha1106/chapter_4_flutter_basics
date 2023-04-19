@@ -65,9 +65,9 @@ class _MyTextElevatedButtonState extends State<MyTextElevatedButton> {
                       side: BorderSide(color: Color(0xffff4d6d), width: 1),
                     ),
                     backgroundColor:
-                        isTextHover ? const Color(0xff2b2b2b) : const Color(0xff2b2b2b),
+                        isTextHover ? const Color(0xff2b2b2b) : const Color(0xfffff0f3),
                     foregroundColor: const Color(0xffff4d6d),
-                    textStyle: const TextStyle(fontSize: 25)),
+                    textStyle: const TextStyle(fontSize: 25,fontFamily: 'DynaPuff')),
                 child: const Text("Text Button"),
               ),
             ),
@@ -109,13 +109,13 @@ class _MyTextElevatedButtonState extends State<MyTextElevatedButton> {
                     padding: const EdgeInsets.all(10),
                     textStyle: const TextStyle(fontSize: 25)),
                 child: const Text("Elevated Button",
-                    style: TextStyle(color: Color(0xffff4d6d))),
+                    style: TextStyle(color: Color(0xffff4d6d),fontFamily: 'DynaPuff')),
               ),
             ),
           ],
         ),
       ),
-      backgroundColor: const Color(0xff2b2b2b),
+      //backgroundColor: const Color(0xff2b2b2b),
     );
   }
 }

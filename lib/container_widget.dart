@@ -44,7 +44,7 @@ class _MyContainerState extends State<MyContainer> {
             transform: transform ? Matrix4.rotationZ(0.2) : null,
             decoration: BoxDecoration(
               border: border
-                  ? Border.all(width: 2, color: Colors.white)
+                  ? Border.all(width: 2, color: Color(0xffff4d6d))
                   : null,
               borderRadius: borderRadius ? const BorderRadius.all(
                   Radius.circular(10)) : null,
@@ -58,7 +58,7 @@ class _MyContainerState extends State<MyContainer> {
                 Color(0xfffff0f3)
               ]) : null,
               boxShadow: shadow?  [ const BoxShadow(
-                      color: Colors.white, offset: Offset(5, 5), blurRadius: 25)
+                      color: Color(0xffff4d6d), offset: Offset(5, 5), blurRadius: 25)
                 ] : null),
             child: child ? const Text("Welcome",
                 style: TextStyle(fontSize: 25, color: Colors.white)) : null,
@@ -133,7 +133,7 @@ class _MyContainerState extends State<MyContainer> {
           )
         ],
       ),
-      backgroundColor: const Color(0xff2b2b2b),
+      //backgroundColor: const Color(0xff2b2b2b),
     );
   }
 }

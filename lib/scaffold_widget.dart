@@ -81,7 +81,7 @@ class _MyScaffoldState extends State<MyScaffold> {
                 backgroundColor: MaterialStatePropertyAll(Color(0xffff4d6d))),
             child: Text("Open Bottom Sheet", style: TextStyle(fontSize: 18))),
       ),
-      backgroundColor: Color(0xff2b2b2b),
+      // backgroundColor: Color(0xff2b2b2b),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           const message = SnackBar(

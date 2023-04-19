@@ -89,7 +89,7 @@ class _MyAppBarWidgetState extends State<MyAppBarWidget> {
                 padding: EdgeInsets.fromLTRB(25, 50, 25, 0),
                 child: Text(
                   "Wanna have some fun with AppBar ? 😉",
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+                  style: TextStyle(fontSize: 20, color: Color(0xffff4d6d)),
                 ),
               ),
               Padding(
@@ -98,9 +98,9 @@ class _MyAppBarWidgetState extends State<MyAppBarWidget> {
                   position: DecorationPosition.foreground,
                   decoration: BoxDecoration(
                     backgroundBlendMode: BlendMode.modulate,
-                    color: const Color(0xffff758f),
+                    color: const Color(0xfff8bbd0),
                     border:
-                        Border.all(color: const Color(0xffc9184a), width: 3),
+                        Border.all(color: const Color(0xffff4d6d), width: 3),
                     borderRadius: const BorderRadius.all(Radius.circular(15)),
                   ),
                   child: Padding(
@@ -139,13 +139,13 @@ class _MyAppBarWidgetState extends State<MyAppBarWidget> {
                         padding: EdgeInsets.all(10.0),
                         child: Text(
                           'Select Properties...',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Color(0xffff4d6d)),
                         ),
                       ),
                       dropdownColor: const Color(0xffff758f),
                       icon: const Icon(
                         Icons.arrow_drop_down_sharp,
-                        color: Colors.white,
+                        color: Color(0xffff758f),
                       ),
                       iconSize: 40,
                       style: const TextStyle(
@@ -156,7 +156,6 @@ class _MyAppBarWidgetState extends State<MyAppBarWidget> {
                       borderRadius: const BorderRadius.all(
                         Radius.circular(15),
                       ),
-
                       underline: Container(),
                     ),
                   ),
@@ -166,7 +165,7 @@ class _MyAppBarWidgetState extends State<MyAppBarWidget> {
           ),
         ),
       ),
-      backgroundColor: const Color(0xff2b2b2b),
+      //backgroundColor: const Color(0xff2b2b2b),
     );
   }
 }

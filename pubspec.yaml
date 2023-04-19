@@ -85,6 +85,12 @@ flutter:
     - family: Rubic
       fonts:
         - asset: assets/fonts/RubikPixels-Regular.ttf
+    - family: Chivo
+      fonts:
+        - asset: assets/fonts/ChivoMono-VariableFont_wght.ttf
+    - family:  DynaPuff
+      fonts:
+        - asset: assets/fonts/DynaPuff-VariableFont_wdth,wght.ttf
 
   # fonts:
   #   - family: Schyler

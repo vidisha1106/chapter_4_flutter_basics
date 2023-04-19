@@ -30,19 +30,19 @@ class _MyButtons extends State<MyButtons> {
       body: Center(
         child: Wrap(
           children: [
-            CustomElevatedButton(title: 'Text & Elevated Buttton', routeName: const MyTextElevatedButton(), width: 300, height: 50,),
-            CustomElevatedButton(title: 'Material & Outline Button', routeName: const MyMaterialOutline(), width: 300, height: 50,),
-            CustomElevatedButton(title: 'Icon Button & InkWell', routeName: const MyIconInkWell(), width: 300, height:50,),
-            CustomElevatedButton(title: 'GestureDetector', routeName: const MyGestureDetector(),width: 300, height: 50,),
-            CustomElevatedButton(title: 'DropDownButton', routeName: const MyDropDownButton(),width: 300, height: 50),
-            CustomElevatedButton(title: 'RadioButton', routeName: const MyRadioButton(),width: 300, height: 50),
-            CustomElevatedButton(title: 'RadioListTileButton', routeName: const MyRadioListTile(),width: 300, height: 50),
-            CustomElevatedButton(title: 'PopUpMenuButtton', routeName: const MyPopUpMenuButton(),width: 300, height: 50),
+            CustomElevatedButton(title: 'Text & Elevated Buttton', routeName: const MyTextElevatedButton(), width: 300, height: 65,),
+            CustomElevatedButton(title: 'Material & Outline Button', routeName: const MyMaterialOutline(), width: 300, height: 65,),
+            CustomElevatedButton(title: 'Icon Button & InkWell', routeName: const MyIconInkWell(), width: 300, height:65,),
+            CustomElevatedButton(title: 'GestureDetector', routeName: const MyGestureDetector(),width: 300, height: 65,),
+            CustomElevatedButton(title: 'DropDownButton', routeName: const MyDropDownButton(),width: 300, height: 65),
+            CustomElevatedButton(title: 'RadioButton', routeName: const MyRadioButton(),width: 300, height: 65),
+            CustomElevatedButton(title: 'RadioListTileButton', routeName: const MyRadioListTile(),width: 300, height: 65),
+            CustomElevatedButton(title: 'PopUpMenuButtton', routeName: const MyPopUpMenuButton(),width: 300, height: 65),
             // CustomElevatedButton(title: 'Buttons', routeName: const MyButtons()),
           ],
         ),
       ),
-      backgroundColor: const Color(0xff2b2b2b),
+     // backgroundColor: const Color(0xff2b2b2b),
     );
   }
 }

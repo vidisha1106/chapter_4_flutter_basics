@@ -33,9 +33,8 @@ class _MyTextwidgetState extends State<MyTextwidget> {
         title: const Text("Text", style: TextStyle(fontSize: 25)),
         elevation: 0,
       ),
-      body: Container(
-        decoration: const BoxDecoration(color: Color(0xff2b2b2b)),
-        child: Column(children: [
+      body: Wrap(
+        children:[ Column(children: [
           Container(
             height: 250,
             width: 500,
@@ -200,7 +199,7 @@ class _MyTextwidgetState extends State<MyTextwidget> {
             ],
           ),
         ]),
-      ),
+      ]),
     );
   }
 }
@@ -221,14 +220,14 @@ class CustomTextButton extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: TextButton(
         onPressed: onPressed,
-        style: TextButton.styleFrom(
+        /*style: TextButton.styleFrom(
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
             shape: const RoundedRectangleBorder(
                 side: BorderSide(color: Color(0xfffff0f3), width: 2),
                 borderRadius: BorderRadius.all(Radius.circular(25))),
             backgroundColor: const Color(0xffff4d6d),
             foregroundColor: const Color(0xfffff0f3),
-            textStyle: const TextStyle(fontSize: 20)),
+            textStyle: const TextStyle(fontSize: 20)),*/
         child: Text(title),
       ),
     );
