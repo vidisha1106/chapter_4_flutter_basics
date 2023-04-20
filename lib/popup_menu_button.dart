@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
-class MyPopUpMenuButton extends StatefulWidget {
-  const MyPopUpMenuButton({Key? key}) : super(key: key);
+ThemeMode _themeMode=ThemeMode.light;
+
+
+class MyPopUpMenuButton extends StatefulWidget{
+  MyPopUpMenuButton({Key? key}) : super(key: key);
+
+  get themeMode => _themeMode;
 
   @override
   State<MyPopUpMenuButton> createState() => _MyPopUpMenuButtonState();
 }
 
-class _MyPopUpMenuButtonState extends State<MyPopUpMenuButton> {
-
-
-
+class _MyPopUpMenuButtonState extends State<MyPopUpMenuButton> with ChangeNotifier{
+  List<String> popList = ['Light Theme', 'Dark Theme'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,8 +24,26 @@ class _MyPopUpMenuButtonState extends State<MyPopUpMenuButton> {
             style: TextStyle(fontSize: 25, color: Colors.white)),
         elevation: 0,
       ),
-      body: PopupMenuButton(itemBuilder: (context) =>  ,
-      icon: Icon(Icons.lightbulb_outline),iconSize: 25),
+      body: PopupMenuButton(
+        itemBuilder: (context) => popList
+            .map((e) => PopupMenuItem(
+                  child: Text(e),
+                  value: e,
+                ))
+            .toList(),
+        icon: Icon(Icons.lightbulb_outline),
+        iconSize: 25,
+        onSelected: (value) {
+          if (value==popList[0]){
+            _themeMode=ThemeMode.light;
+            notifyListeners();
+          }
+          {
+            _themeMode=ThemeMode.dark;
+            notifyListeners();
+          }
+        },
+      ),
     );
   }
 }

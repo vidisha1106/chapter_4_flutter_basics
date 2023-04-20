@@ -5,24 +5,36 @@ import 'package:chapter_4_flutter_basics/buttons_widget.dart';
 import 'package:chapter_4_flutter_basics/icon_widget.dart';
 import 'package:chapter_4_flutter_basics/image_widget.dart';
 import 'package:chapter_4_flutter_basics/placeholder_widget.dart';
+import 'package:chapter_4_flutter_basics/popup_menu_button.dart';
+import 'package:chapter_4_flutter_basics/reusable_code/theme_constants.dart';
 import 'package:chapter_4_flutter_basics/row_widget.dart';
 import 'package:chapter_4_flutter_basics/scaffold_widget.dart';
 import 'package:chapter_4_flutter_basics/text_widget.dart';
 import 'package:chapter_4_flutter_basics/textfield_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'popup_menu_button.dart';
+
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+MyPopUpMenuButton _myPopUpMenuButton=MyPopUpMenuButton();
+
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
+      theme: lightTheme,
+      /*ThemeData(
         brightness: Brightness.light,
         primaryColor: Colors.pink[900],
         fontFamily: 'Chivo',
@@ -45,8 +57,9 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-      ),
-      darkTheme: ThemeData(
+      ),*/
+      darkTheme: darkTheme,
+      /*ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.pink[900],
         fontFamily: 'DynaPuff',
@@ -69,7 +82,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-      ),
+      ),*/
       initialRoute: '/home',
       routes: {
         '/home': (context) => MyHomePage(),
@@ -80,7 +93,7 @@ class MyApp extends StatelessWidget {
         Locale('fr','FR'),
         Locale('es','ES')
       ],*/
-      themeMode: ThemeMode.system,
+      themeMode: _myPopUpMenuButton.themeMode,
       title: 'Flutter App',
       // home: MyHomePage(),
       debugShowCheckedModeBanner: false,
@@ -96,6 +109,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -137,6 +151,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       //backgroundColor: const Color(0xff2b2b2b),
     );
+  }
+
+  @override
+  void initState() {
+
   }
 }
 
