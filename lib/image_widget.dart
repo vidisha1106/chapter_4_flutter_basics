@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:chapter_4_flutter_basics/text_widget.dart'
     show CustomTextButton;
 
-import 'assets_images.dart';
+import 'reusable_code/assets_images.dart';
 
 class MyImageWidget extends StatefulWidget {
   const MyImageWidget({Key? key}) : super(key: key);

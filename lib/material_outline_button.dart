@@ -7,7 +7,8 @@ class MyMaterialOutline extends StatefulWidget {
   State<MyMaterialOutline> createState() => _MyMaterialOutlineState();
 }
 
-class _MyMaterialOutlineState extends State<MyMaterialOutline> {
+class _MyMaterialOutlineState extends State<MyMaterialOutline>
+{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,13 +37,10 @@ class _MyMaterialOutlineState extends State<MyMaterialOutline> {
                   );
                   ScaffoldMessenger.of(context).showSnackBar(message);
                 },
-                padding: const EdgeInsets.all(10),
-                height: 250,
+                //padding: const EdgeInsets.all(10),
                 elevation: 25,
-                color: const Color(0xff2b2b2b),
-                minWidth: 250,
                 shape: const BeveledRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
                     side: BorderSide(width: 0.3, color: Color(0xffff4d6d))),
                 child: const Text("Material Button",
                     style: TextStyle(color: Color(0xffff4d6d), fontSize: 22)),
@@ -61,12 +59,13 @@ class _MyMaterialOutlineState extends State<MyMaterialOutline> {
                 label: const Text("Outlined Button",
                     style: TextStyle(color: Color(0xffff4d6d), fontSize: 20)),
                 style: OutlinedButton.styleFrom(
-                    side: const BorderSide(width: 2, color: Color(0xffff4d6d)),
-                    padding: const EdgeInsets.all(25),
+                    side: const BorderSide(width: 1, color: Color(0xffff4d6d)),
+                    //padding: const EdgeInsets.all(25),
                     shape: const BeveledRectangleBorder(
                         side: BorderSide(color: Color(0xffff4d6d), width: 2),
-                        borderRadius: BorderRadius.all(Radius.circular(25))),
-                    minimumSize: const Size(250, 250)),
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                    //minimumSize: const Size(250, 250),
+                ),
               ),
             )
           ],

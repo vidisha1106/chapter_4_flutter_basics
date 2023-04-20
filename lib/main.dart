@@ -23,38 +23,43 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          brightness: Brightness.light,
-          primaryColor: Colors.pink[900],
-          fontFamily: 'Chivo',
-          textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(
+        brightness: Brightness.light,
+        primaryColor: Colors.pink[900],
+        fontFamily: 'Chivo',
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
               shape: const RoundedRectangleBorder(
                   side: BorderSide(color: Color(0xffff4d6d), width: 2),
                   borderRadius: BorderRadius.all(Radius.circular(25))),
               backgroundColor: const Color(0xfffff0f3),
               foregroundColor: const Color(0xffff4d6d),
-              textStyle: const TextStyle(fontSize: 17,fontFamily: 'Chivo')),),
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-              textStyle:  const TextStyle(
-                fontFamily: 'Chivo',
-                fontSize: 20,
-                color: Colors.white,
-              ),
+              textStyle: const TextStyle(fontSize: 17, fontFamily: 'Chivo')),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            textStyle: const TextStyle(
+              fontFamily: 'Chivo',
+              fontSize: 20,
+              color: Colors.white,
             ),
-          ),),
+          ),
+        ),
+      ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.pink[900],
         fontFamily: 'DynaPuff',
-        textButtonTheme: TextButtonThemeData(style: TextButton.styleFrom(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-            shape: const RoundedRectangleBorder(
-                side: BorderSide(color: Color(0xfffff0f3), width: 2),
-                borderRadius: BorderRadius.all(Radius.circular(25))),
-            backgroundColor: const Color(0xffff4d6d),
-            foregroundColor: const Color(0xfffff0f3),
-            textStyle: const TextStyle(fontSize: 17,fontFamily: 'DynaPuff')),),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+              shape: const RoundedRectangleBorder(
+                  side: BorderSide(color: Color(0xfffff0f3), width: 2),
+                  borderRadius: BorderRadius.all(Radius.circular(25))),
+              backgroundColor: const Color(0xffff4d6d),
+              foregroundColor: const Color(0xfffff0f3),
+              textStyle: const TextStyle(fontSize: 17, fontFamily: 'DynaPuff')),
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             textStyle: TextStyle(
@@ -63,14 +68,15 @@ class MyApp extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-        ),),
+        ),
+      ),
       initialRoute: '/home',
       routes: {
         '/home': (context) => MyHomePage(),
-        '/appbar':(context) => MyAppBarWidget(),
+        '/appbar': (context) => MyAppBarWidget(),
       },
-      locale: Locale('en','US'),
-     /* supportedLocales: [
+      locale: Locale('en', 'US'),
+      /* supportedLocales: [
         Locale('fr','FR'),
         Locale('es','ES')
       ],*/
@@ -121,9 +127,11 @@ class _MyHomePageState extends State<MyHomePage> {
             CustomElevatedButton(
                 title: 'Buttons', routeName: const MyButtons()),
             CustomElevatedButton(
-                title: 'Placeholder', routeName: const MyPlaceholder(),width: 175),
+                title: 'Placeholder',
+                routeName: const MyPlaceholder(),
+                width: 175),
             CustomElevatedButton(
-                title: 'TextField', routeName: const MyTextField(),width: 175),
+                title: 'TextField', routeName: const MyTextField(), width: 175),
           ],
         ),
       ),
@@ -132,35 +140,35 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class CustomElevatedButton extends StatefulWidget {
+class CustomElevatedButton extends StatelessWidget {
   var title;
-  var routeName;
+  Widget? routeName;
+  void Function()? onPressed;
   double width, height;
 
   CustomElevatedButton(
       {super.key,
       required this.title,
-      required this.routeName,
+      this.routeName,
+      this.onPressed,
       this.width = 111,
       this.height = 100});
 
-  @override
-  State<CustomElevatedButton> createState() => _CustomElevatedButtonState();
-}
-
-class _CustomElevatedButtonState extends State<CustomElevatedButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(5.0),
       child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => widget.routeName,
-              ));
-        },
+        onPressed: routeName == null
+            ? onPressed
+            : () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => routeName!,
+                  ),
+                );
+              },
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xffff4d6d),
           side: BorderSide(color: Color(0xffffccd5), width: 1),
@@ -169,13 +177,13 @@ class _CustomElevatedButtonState extends State<CustomElevatedButton> {
           shape: const BeveledRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(10))),
           padding: const EdgeInsets.all(10),
-          fixedSize: Size(widget.width, widget.height),
+          fixedSize: Size(width, height),
           // textStyle: const TextStyle(
           //   fontSize: 21,
           //   color: Colors.white,
           // ),
         ),
-        child: Text(widget.title),
+        child: Text(title),
       ),
     );
   }

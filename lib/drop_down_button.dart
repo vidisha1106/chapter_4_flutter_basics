@@ -8,8 +8,62 @@ class MyDropDownButton extends StatefulWidget {
 }
 
 class _MyDropDownButtonState extends State<MyDropDownButton> {
+  List<String> lan = [
+    'Flutter',
+    'Php',
+    'Android',
+    'Native Mobile',
+    'React Native',
+    'Node JS',
+    'Angular JS'
+  ];
+
+  String? dropdownvalue;
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color(0xffff4d6d),
+          centerTitle: true,
+          title: const Text("DropDownButton",
+              style: TextStyle(fontSize: 25, color: Colors.white)),
+          elevation: 0,
+        ),
+        body: Center(
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+                color: Color(0xfff8bbd0),
+                borderRadius: BorderRadius.all(Radius.circular(25)),
+                border: Border.all(color: Color(0xffff4d6d), width: 2),
+                backgroundBlendMode: BlendMode.modulate),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: DropdownButton(
+                  value: dropdownvalue,
+                  iconSize: 30,
+                  style: TextStyle(color: Color(0xffff4d6d), fontSize: 20),
+                  autofocus: true,
+                  elevation: 25,
+                  borderRadius: BorderRadius.all(Radius.circular(25)),
+                  alignment: Alignment.center,
+                  dropdownColor: Color(0xffFCC8D1),
+                  hint: Text('Choose your Language',
+                      style: TextStyle(fontSize: 20, color: Color(0xffff4d6d))),
+                  icon: Icon(Icons.arrow_drop_down, color: Color(0xffff4d6d)),
+                  items: lan
+                      .map((e) => DropdownMenuItem(
+                            child: Text(e),
+                            value: e,
+                          ))
+                      .toList(),
+                  onChanged: (newValue) {
+                    setState(() {
+                      dropdownvalue = newValue;
+                    });
+                  },underline: Container()),
+            ),
+          ),
+        ));
   }
 }

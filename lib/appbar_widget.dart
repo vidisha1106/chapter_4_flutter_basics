@@ -1,4 +1,4 @@
-import 'package:chapter_4_flutter_basics/assets_images.dart';
+import 'package:chapter_4_flutter_basics/reusable_code/assets_images.dart';
 import 'package:flutter/material.dart';
 
 class MyAppBarWidget extends StatefulWidget {
