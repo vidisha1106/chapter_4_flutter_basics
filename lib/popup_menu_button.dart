@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
-ThemeMode _themeMode=ThemeMode.light;
-
-
-class MyPopUpMenuButton extends StatefulWidget{
+class MyPopUpMenuButton extends StatefulWidget {
   MyPopUpMenuButton({Key? key}) : super(key: key);
-
-  get themeMode => _themeMode;
 
   @override
   State<MyPopUpMenuButton> createState() => _MyPopUpMenuButtonState();
 }
 
-class _MyPopUpMenuButtonState extends State<MyPopUpMenuButton> with ChangeNotifier{
+class _MyPopUpMenuButtonState extends State<MyPopUpMenuButton>
+    with ChangeNotifier {
+
   List<String> popList = ['Light Theme', 'Dark Theme'];
+  var selectedMode;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,25 +23,39 @@ class _MyPopUpMenuButtonState extends State<MyPopUpMenuButton> with ChangeNotifi
             style: TextStyle(fontSize: 25, color: Colors.white)),
         elevation: 0,
       ),
-      body: PopupMenuButton(
-        itemBuilder: (context) => popList
-            .map((e) => PopupMenuItem(
-                  child: Text(e),
-                  value: e,
-                ))
-            .toList(),
-        icon: Icon(Icons.lightbulb_outline),
-        iconSize: 25,
-        onSelected: (value) {
-          if (value==popList[0]){
-            _themeMode=ThemeMode.light;
-            notifyListeners();
-          }
-          {
-            _themeMode=ThemeMode.dark;
-            notifyListeners();
-          }
-        },
+      body: Center(
+        child: PopupMenuButton(
+          itemBuilder: (context) => popList
+              .map((e) => PopupMenuItem(
+                    child: Text(e),
+                    value: e,
+                  ))
+              .toList(),
+          icon: Icon(Icons.lightbulb_outline),
+          iconSize: 50,
+          offset: Offset(4, 6),
+          initialValue: selectedMode,
+          elevation: 25,
+          color: Color(0xffff4d6d),
+          tooltip: 'Theme of an App',
+          shape: RoundedRectangleBorder(
+              side: BorderSide(color: Color(0xfff8bbd0), width: 2),
+              borderRadius: BorderRadius.all(Radius.circular(25))),
+          onSelected: (value) {
+            setState(() {
+            if (value == popList[0]) {
+              selectedMode=value;
+              var msg=SnackBar(content: Text("Light Theme is Selected..."),);
+              ScaffoldMessenger.of(context).showSnackBar(msg);
+            }
+            {
+              selectedMode=value;
+              var msg=SnackBar(content: Text("Dark Theme is Selected..."),);
+              ScaffoldMessenger.of(context).showSnackBar(msg);
+            }
+            });
+          },
+        ),
       ),
     );
   }

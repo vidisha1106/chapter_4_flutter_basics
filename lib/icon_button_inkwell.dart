@@ -8,8 +8,7 @@ class MyIconInkWell extends StatefulWidget {
 }
 
 class _MyIconInkWellState extends State<MyIconInkWell> {
-
-  final iconFocus=FocusNode();
+  final iconFocus = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -21,17 +20,43 @@ class _MyIconInkWellState extends State<MyIconInkWell> {
             style: TextStyle(fontSize: 20, color: Colors.white)),
         elevation: 0,
       ),
-      body: Ink(
-        decoration: ShapeDecoration(shape: OutlineInputBorder(),color: Colors.cyanAccent),
-        child: IconButton(
-            onPressed: () {},
-            iconSize: 100,
-            icon: Icon(Icons.code),
-            color: Color(0xffff4d6d),
-            splashColor: Color(0xfff8bbd0),
-            tooltip: "Code",
-            autofocus: true,
-            splashRadius: 50,highlightColor: Colors.red),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(
+                onPressed: () {
+                  var msg=SnackBar(content: Text("IconButton"));
+                  ScaffoldMessenger.of(context).showSnackBar(msg);
+                },
+                iconSize: 100,
+                icon: Icon(Icons.code),
+                color: Color(0xffff4d6d),
+                splashColor: Color(0xfff8bbd0),
+                tooltip: "Code",
+                autofocus: true,
+                splashRadius: 50,
+                highlightColor: Colors.red),
+            InkWell(
+              borderRadius: BorderRadius.all(Radius.circular(25)),
+                onTap: (){
+                  var msg=SnackBar(content: Text("InkWell"));
+                  ScaffoldMessenger.of(context).showSnackBar(msg);
+                },
+
+                highlightColor: Color(0xffff4d6d),
+                splashColor: Colors.limeAccent,
+                child: Container(
+                  width: 250,
+                    height: 250,
+                    child: Center(
+                      child: Text(
+              "InkWell",
+              style: TextStyle(color: Color(0xffff4d6d), fontSize: 25),
+            ),
+                    )))
+          ],
+        ),
       ),
     );
   }

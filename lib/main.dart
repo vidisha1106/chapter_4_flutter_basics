@@ -4,6 +4,7 @@ import 'package:chapter_4_flutter_basics/container_widget.dart';
 import 'package:chapter_4_flutter_basics/buttons_widget.dart';
 import 'package:chapter_4_flutter_basics/icon_widget.dart';
 import 'package:chapter_4_flutter_basics/image_widget.dart';
+import 'package:chapter_4_flutter_basics/media_query.dart';
 import 'package:chapter_4_flutter_basics/placeholder_widget.dart';
 import 'package:chapter_4_flutter_basics/popup_menu_button.dart';
 import 'package:chapter_4_flutter_basics/reusable_code/theme_constants.dart';
@@ -19,8 +20,6 @@ void main() {
   runApp(const MyApp());
 }
 
-MyPopUpMenuButton _myPopUpMenuButton=MyPopUpMenuButton();
-
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -33,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: lightTheme,
+      theme: ThemeClass.lightTheme,
       /*ThemeData(
         brightness: Brightness.light,
         primaryColor: Colors.pink[900],
@@ -58,7 +57,7 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
       ),*/
-      darkTheme: darkTheme,
+      darkTheme: ThemeClass.darkTheme,
       /*ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.pink[900],
@@ -93,7 +92,7 @@ class _MyAppState extends State<MyApp> {
         Locale('fr','FR'),
         Locale('es','ES')
       ],*/
-      themeMode: _myPopUpMenuButton.themeMode,
+      themeMode: ThemeMode.system,
       title: 'Flutter App',
       // home: MyHomePage(),
       debugShowCheckedModeBanner: false,
@@ -109,7 +108,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,16 +144,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 175),
             CustomElevatedButton(
                 title: 'TextField', routeName: const MyTextField(), width: 175),
+            CustomElevatedButton(
+                title: 'MediaQuery',
+                routeName: const MyMediaQuery(),
+                width: 175),
           ],
         ),
       ),
       //backgroundColor: const Color(0xff2b2b2b),
     );
-  }
-
-  @override
-  void initState() {
-
   }
 }
 

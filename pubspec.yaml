@@ -37,12 +37,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   decorated_dropdownbutton: ^0.0.3
   chips_choice_null_safety: ^2.0.6
+  provider:
+  shared_preferences:
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  email_validator: ^2.0.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
