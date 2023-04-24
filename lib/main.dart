@@ -1,4 +1,6 @@
 import 'package:chapter_4_flutter_basics/appbar_widget.dart';
+import 'package:chapter_4_flutter_basics/assets.dart';
+import 'package:chapter_4_flutter_basics/assets_fonts.dart';
 import 'package:chapter_4_flutter_basics/column_widget.dart';
 import 'package:chapter_4_flutter_basics/container_widget.dart';
 import 'package:chapter_4_flutter_basics/buttons_widget.dart';
@@ -148,6 +150,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: 'MediaQuery',
                 routeName: const MyMediaQuery(),
                 width: 175),
+            CustomElevatedButton(
+              title: 'Assets',
+              routeName: MyAssets(),
+            ),
+            CustomElevatedButton(
+              title: 'Fonts',
+              routeName: MyFonts(),
+            )
           ],
         ),
       ),
@@ -184,6 +194,7 @@ class CustomElevatedButton extends StatelessWidget {
                     builder: (context) => routeName!,
                   ),
                 );
+                //context.dependOnInheritedWidgetOfExactType(aspect: routeName);
               },
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xffff4d6d),

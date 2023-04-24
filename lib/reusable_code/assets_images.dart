@@ -8,4 +8,5 @@ class Images{
   static const String sunrise='assets/images/sunrise.jpeg';
   static const String sunrise2='assets/images/sunrise2.jpeg';
   static const String dog='assets/images/dog.jpeg';
+  static const String gif='assets/images/gif.gif';
 }

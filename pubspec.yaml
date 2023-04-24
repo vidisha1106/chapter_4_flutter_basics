@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   decorated_dropdownbutton: ^0.0.3
   chips_choice_null_safety: ^2.0.6
+  google_fonts: ^2.0.0
   provider:
   shared_preferences:
 
@@ -59,6 +60,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
+    - assets/text_files/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -90,9 +92,23 @@ flutter:
     - family: Chivo
       fonts:
         - asset: assets/fonts/ChivoMono-VariableFont_wght.ttf
+          weight: 900
+        - asset: assets/fonts/ChivoMono-VariableFont_wght.ttf
+          weight: 800
+        - asset: assets/fonts/ChivoMono-VariableFont_wght.ttf
+          weight: 700
+        - asset: assets/fonts/ChivoMono-VariableFont_wght.ttf
+          weight: 600
     - family:  DynaPuff
       fonts:
         - asset: assets/fonts/DynaPuff-VariableFont_wdth,wght.ttf
+          weight: 500
+        - asset: assets/fonts/DynaPuff-VariableFont_wdth,wght.ttf
+          weight: 400
+        - asset: assets/fonts/DynaPuff-VariableFont_wdth,wght.ttf
+          weight: 300
+        - asset: assets/fonts/DynaPuff-VariableFont_wdth,wght.ttf
+          weight: 200
 
   # fonts:
   #   - family: Schyler

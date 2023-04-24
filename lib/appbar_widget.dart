@@ -1,5 +1,6 @@
 import 'package:chapter_4_flutter_basics/reusable_code/assets_images.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyAppBarWidget extends StatefulWidget {
   const MyAppBarWidget({Key? key}) : super(key: key);
@@ -55,11 +56,7 @@ class _MyAppBarWidgetState extends State<MyAppBarWidget> {
         backgroundColor: const Color(0xffff4d6d),
         actionsIconTheme: const IconThemeData(size: 25, color: Colors.white),
         leading: appbarLeading
-            ? const Icon(
-                Icons.menu,
-                size: 25,
-            color: Colors.white
-              )
+            ? const Icon(Icons.menu, size: 25, color: Colors.white)
             : null,
         leadingWidth: 60,
         shadowColor: Color(0xffff4d6d),
@@ -71,10 +68,8 @@ class _MyAppBarWidgetState extends State<MyAppBarWidget> {
                     bottomRight: Radius.circular(25)))
             : null,
         title: appbarTitle
-            ? const Text(
-                "AppBar",
-                style: TextStyle(fontSize: 25,color: Colors.white)
-              )
+            ? const Text("AppBar",
+                style: TextStyle(fontSize: 25, color: Colors.white))
             : null,
         toolbarHeight: appbarHeight ? 100 : null,
         centerTitle: appbarCenterTitle ? true : null,
@@ -160,7 +155,22 @@ class _MyAppBarWidgetState extends State<MyAppBarWidget> {
                     ),
                   ),
                 ),
-              )
+              ),
+
+
+              ///Example of styling a single Text Widget by using different properties with RichText
+              /*RichText(
+                  text: TextSpan(
+                    text: 'Hello',
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontFamily: 'Chivo',
+                          color: Colors.blue,
+                          letterSpacing: 2.5,
+                          fontWeight: FontWeight.bold),children: <TextSpan> [
+                            TextSpan(text: '..',style: TextStyle(fontWeight: FontWeight.normal,color: Colors.grey),),
+                    TextSpan(text: 'World',style: TextStyle(letterSpacing: 2.5,color: Colors.pink))
+                  ]),),*/
             ],
           ),
         ),

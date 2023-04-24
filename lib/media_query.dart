@@ -1,5 +1,6 @@
 import 'package:chapter_4_flutter_basics/reusable_code/sizes_helpers.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyMediaQuery extends StatefulWidget {
   const MyMediaQuery({Key? key}) : super(key: key);
@@ -36,6 +37,7 @@ class _MyMediaQueryState extends State<MyMediaQuery> {
               width: screenWidth,
               height: (screenHeight)*0.25,
               child: Text("Features \n${mediaQueryData.orientation.toString()}",
+                  //style: GoogleFonts.lato(fontSize: 20),
                   style: TextStyle(fontSize: screenWidth * 0.05),
                   textAlign: TextAlign.center),
             ),
