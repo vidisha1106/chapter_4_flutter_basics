@@ -20,13 +20,13 @@ class _MyFontsState extends State<MyFonts> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
+          children: const [
             Text(
               'Welcome to Flutter',
               style: TextStyle(
                   fontSize: 20,
                   fontFamily: 'Chivo',
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.w100,
                   color: Color(0xffff4d6d)),
             ),
             Text(
@@ -35,7 +35,23 @@ class _MyFontsState extends State<MyFonts> {
               style: TextStyle(
                   fontSize: 20,
                   fontFamily: 'Chivo',
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w200,
+                  color: Color(0xffff4d6d)),
+            ),
+            Text(
+              'Welcome to Flutter',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'Chivo',
+                  fontWeight: FontWeight.w300,
+                  color: Color(0xffff4d6d)),
+            ),
+            Text(
+              'Welcome to Flutter',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'Chivo',
+                  fontWeight: FontWeight.w400,
                   color: Color(0xffff4d6d)),
             ),
             Text(
@@ -51,42 +67,33 @@ class _MyFontsState extends State<MyFonts> {
               style: TextStyle(
                   fontSize: 20,
                   fontFamily: 'Chivo',
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w600,
                   color: Color(0xffff4d6d)),
             ),
             Text(
               'Welcome to Flutter',
               style: TextStyle(
                   fontSize: 20,
-                  fontFamily: 'DynaPuff',
-                  fontWeight: FontWeight.w100,
+                  fontFamily: 'Chivo',
+                  fontWeight: FontWeight.w700,
                   color: Color(0xffff4d6d)),
             ),
             Text(
               'Welcome to Flutter',
               style: TextStyle(
                   fontSize: 20,
-                  fontFamily: 'DynaPuff',
-                  fontWeight: FontWeight.w400,
+                  fontFamily: 'Chivo',
+                  fontWeight: FontWeight.w800,
                   color: Color(0xffff4d6d)),
             ),
             Text(
               'Welcome to Flutter',
               style: TextStyle(
                   fontSize: 20,
-                  fontFamily: 'DynaPuff',
-                  fontWeight: FontWeight.w300,
+                  fontFamily: 'Chivo',
+                  fontWeight: FontWeight.w900,
                   color: Color(0xffff4d6d)),
             ),
-            Text(
-              'Welcome to Flutter',
-              style: TextStyle(
-                  fontSize: 20
-                  ,
-                  fontFamily: 'DynaPuff',
-                  fontWeight: FontWeight.w200,
-                  color: Color(0xffff4d6d)),
-            )
           ],
         ),
       ),
