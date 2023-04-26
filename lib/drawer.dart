@@ -45,87 +45,34 @@ class _MyDrawerState extends State<MyDrawer> {
                     ),
                   ],
                 )),
-            ListTile(
-                onTap: () {},
-                leading: Icon(Icons.dashboard, color: Color(0xffff4d6d)),
-                title: Text("Dashboard",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading: Icon(Icons.contacts_sharp, color: Color(0xffff4d6d)),
-                title: Text("Contacts",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading: Icon(Icons.event, color: Color(0xffff4d6d)),
-                title: Text("Events",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading: Icon(Icons.notes, color: Color(0xffff4d6d)),
-                title: Text("Notes",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading: Icon(Icons.notifications, color: Color(0xffff4d6d)),
-                title: Text("Notifications",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading: Icon(Icons.message, color: Color(0xffff4d6d)),
-                title: Text("Messages",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading: Icon(Icons.account_circle, color: Color(0xffff4d6d)),
-                title: Text(
-                  "Profile",
-                  style: TextStyle(color: Color(0xffff4d6d), fontSize: 18),
-                )),
-            ListTile(
-                onTap: () {},
-                leading: Icon(Icons.settings, color: Color(0xffff4d6d)),
-                title: Text("Settings",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            Divider(),
-            ListTile(
-                onTap: () {},
-                leading:
-                    Icon(Icons.privacy_tip_outlined, color: Color(0xffff4d6d)),
-                title: Text("Privacy Policy",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading:
-                Icon(Icons.privacy_tip_outlined, color: Color(0xffff4d6d)),
-                title: Text("Privacy Policy",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading:
-                Icon(Icons.privacy_tip_outlined, color: Color(0xffff4d6d)),
-                title: Text("Privacy Policy",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading:
-                Icon(Icons.privacy_tip_outlined, color: Color(0xffff4d6d)),
-                title: Text("Privacy Policy",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))), ListTile(
-                onTap: () {},
-                leading:
-                Icon(Icons.privacy_tip_outlined, color: Color(0xffff4d6d)),
-                title: Text("Privacy Policy",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
-            ListTile(
-                onTap: () {},
-                leading:
-                    Icon(Icons.feedback_outlined, color: Color(0xffff4d6d)),
-                title: Text("Send Feedback",
-                    style: TextStyle(color: Color(0xffff4d6d), fontSize: 18))),
+            DrawerListTile(
+                icon: Icons.dashboard,
+                id: 1,
+                title: "Dashboard",
+                )
           ],
         ),
       ),
     );
   }
+}
+
+Widget DrawerListTile(
+    {required IconData icon,
+    required int id,
+    required String title,
+    void Function()? onTap,
+    bool? isSelected}) {
+  return InkWell(
+    onTap: () {},
+    child: ListTile(
+      leading: Icon(icon),
+      iconColor: Color(0xffff4d6d),
+      onTap: () {},
+      selected: true,
+      selectedTileColor: Color(0xfff8bbd0),
+      title:
+          Text(title, style: TextStyle(color: Color(0xffff4d6d), fontSize: 18)),
+    ),
+  );
 }
