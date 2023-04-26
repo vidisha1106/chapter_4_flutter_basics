@@ -6,6 +6,7 @@ import 'package:chapter_4_flutter_basics/column_widget.dart';
 import 'package:chapter_4_flutter_basics/container_widget.dart';
 import 'package:chapter_4_flutter_basics/buttons_widget.dart';
 import 'package:chapter_4_flutter_basics/data_files.dart';
+import 'package:chapter_4_flutter_basics/drawer.dart';
 import 'package:chapter_4_flutter_basics/icon_widget.dart';
 import 'package:chapter_4_flutter_basics/image_widget.dart';
 import 'package:chapter_4_flutter_basics/media_query.dart';
@@ -175,12 +176,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 CustomElevatedButton(
                   title: 'Widget Lifecycle',
-                  routeName: MyWidgetLifecycle(),
+                  routeName: MyWidgetLifecycle(),width: 125,
                 ),
                 CustomElevatedButton(
                   title: 'BottomNavigationBar',
                   routeName: MyBottomNavigationBar(),width: 250,
-                )
+                ),
+                CustomElevatedButton(
+                  title: 'Drawer',
+                  routeName: MyDrawer(),
+                ),
               ],
             ),
           ),
