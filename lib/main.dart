@@ -1,3 +1,4 @@
+import 'package:chapter_4_flutter_basics/MySliverAppBar.dart';
 import 'package:chapter_4_flutter_basics/appbar_widget.dart';
 import 'package:chapter_4_flutter_basics/assets.dart';
 import 'package:chapter_4_flutter_basics/assets_fonts.dart';
@@ -15,6 +16,8 @@ import 'package:chapter_4_flutter_basics/popup_menu_button.dart';
 import 'package:chapter_4_flutter_basics/reusable_code/theme_constants.dart';
 import 'package:chapter_4_flutter_basics/row_widget.dart';
 import 'package:chapter_4_flutter_basics/scaffold_widget.dart';
+import 'package:chapter_4_flutter_basics/tab_bar.dart';
+import 'package:chapter_4_flutter_basics/tab_page_selector.dart';
 import 'package:chapter_4_flutter_basics/text_widget.dart';
 import 'package:chapter_4_flutter_basics/textfield_widget.dart';
 import 'package:chapter_4_flutter_basics/widget_lifecycle.dart';
@@ -185,6 +188,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 CustomElevatedButton(
                   title: 'Drawer',
                   routeName: MyDrawer(),
+                ),
+                CustomElevatedButton(
+                  title: 'TabBar',
+                  routeName: MyTabBar(),
+                ),
+                CustomElevatedButton(
+                  title: 'TabPageSelector',
+                  routeName: MyTabPageSelector(),
+                ),
+                CustomElevatedButton(
+                  title: 'SliverAppBar',width: 150,
+                  routeName: MySliverAppBar(),
                 ),
               ],
             ),

@@ -9,6 +9,20 @@ class MyDrawer extends StatefulWidget {
 }
 
 class _MyDrawerState extends State<MyDrawer> {
+  int initialIndex = 0;
+
+  List<Widget> pages = [
+    const Center(
+      child: Text("Dashboard",style: TextStyle(color: Color(0xffff4d6d),fontSize: 25),),
+    ),
+    const Center(
+      child: Text("Contacts",style: TextStyle(color: Color(0xffff4d6d),fontSize: 25)),
+    ),
+    const Center(
+      child: Text("Events",style: TextStyle(color: Color(0xffff4d6d),fontSize: 25)),
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,57 +36,85 @@ class _MyDrawerState extends State<MyDrawer> {
         child: ListView(
           children: [
             DrawerHeader(
-                decoration: BoxDecoration(color: Color(0xffff4d6d)),
+                decoration: const BoxDecoration(color: Color(0xffff4d6d)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       //margin: EdgeInsets.only(bottom: 10),
                       height: 70,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(Images.accountIcon),
                           ),
                           shape: BoxShape.circle),
                     ),
-                    Text(
+                    const Text(
                       "Vidisha Luhar",
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
-                    Text(
+                    const Text(
                       "vidisha.l@simformsolutions.com",
                       style: TextStyle(color: Colors.white, fontSize: 15),
                     ),
                   ],
                 )),
-            DrawerListTile(
-                icon: Icons.dashboard,
-                id: 1,
-                title: "Dashboard",
-                )
+            drawerListTile(
+              icon: Icons.dashboard,
+              title: "Dashboard",
+              isSelected: initialIndex == 0,
+              onTap: () {
+                setState(() {
+                  initialIndex = 0;
+                });
+                Navigator.pop(context);
+                // Navigator.
+              },
+            ),
+            drawerListTile(
+              icon: Icons.contacts,
+              title: "Contacts",
+              isSelected: initialIndex == 1,
+              onTap: () {
+                setState(() {
+                  initialIndex = 1;
+                });
+                Navigator.pop(context);
+                // Navigator.
+              },
+            ),
+            drawerListTile(
+              icon: Icons.event,
+              title: "Events",
+              isSelected: initialIndex == 2,
+              onTap: () {
+                setState(() {
+                  initialIndex = 2;
+                });
+                Navigator.pop(context);
+                // Navigator.
+              },
+            ),
           ],
         ),
       ),
+      body: pages[initialIndex],
     );
   }
 }
 
-Widget DrawerListTile(
+Widget drawerListTile(
     {required IconData icon,
-    required int id,
     required String title,
     void Function()? onTap,
-    bool? isSelected}) {
-  return InkWell(
-    onTap: () {},
-    child: ListTile(
-      leading: Icon(icon),
-      iconColor: Color(0xffff4d6d),
-      onTap: () {},
-      selected: true,
-      selectedTileColor: Color(0xfff8bbd0),
-      title:
-          Text(title, style: TextStyle(color: Color(0xffff4d6d), fontSize: 18)),
-    ),
+    required bool isSelected}) {
+  return ListTile(
+    leading: Icon(icon, color: const Color(0xffff4d6d)),
+    iconColor: const Color(0xffff4d6d),
+    onTap: onTap,
+    selected: isSelected,
+    selectedTileColor: const Color(0xfff8bbd0),
+    title:
+        Text(title, style: const TextStyle(color: Color(0xffff4d6d), fontSize: 18)),
   );
 }
