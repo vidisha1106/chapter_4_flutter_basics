@@ -8,6 +8,7 @@ import 'package:chapter_4_flutter_basics/container_widget.dart';
 import 'package:chapter_4_flutter_basics/buttons_widget.dart';
 import 'package:chapter_4_flutter_basics/data_files.dart';
 import 'package:chapter_4_flutter_basics/drawer.dart';
+import 'package:chapter_4_flutter_basics/floating_action_button.dart';
 import 'package:chapter_4_flutter_basics/icon_widget.dart';
 import 'package:chapter_4_flutter_basics/image_widget.dart';
 import 'package:chapter_4_flutter_basics/media_query.dart';
@@ -16,6 +17,7 @@ import 'package:chapter_4_flutter_basics/popup_menu_button.dart';
 import 'package:chapter_4_flutter_basics/reusable_code/theme_constants.dart';
 import 'package:chapter_4_flutter_basics/row_widget.dart';
 import 'package:chapter_4_flutter_basics/scaffold_widget.dart';
+import 'package:chapter_4_flutter_basics/slider.dart';
 import 'package:chapter_4_flutter_basics/tab_bar.dart';
 import 'package:chapter_4_flutter_basics/tab_page_selector.dart';
 import 'package:chapter_4_flutter_basics/text_widget.dart';
@@ -23,6 +25,7 @@ import 'package:chapter_4_flutter_basics/textfield_widget.dart';
 import 'package:chapter_4_flutter_basics/widget_lifecycle.dart';
 import 'package:flutter/material.dart';
 
+import 'checkbox.dart';
 import 'popup_menu_button.dart';
 
 void main() {
@@ -200,6 +203,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 CustomElevatedButton(
                   title: 'SliverAppBar',width: 150,
                   routeName: MySliverAppBar(),
+                ),
+                CustomElevatedButton(
+                  title: 'FloatingActionButton',width: 225,
+                  routeName: MyFloatingActionButton(),
+                ),
+                CustomElevatedButton(
+                  title: 'CheckBox',width: 125,
+                  routeName: MyCheckBox(),
+                ),
+                CustomElevatedButton(
+                  title: 'Slider',
+                  routeName: MySlider(),
                 ),
               ],
             ),

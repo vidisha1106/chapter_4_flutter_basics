@@ -10,5 +10,6 @@ class Images{
   static const String dog='assets/images/dog.jpeg';
   static const String gif='assets/images/gif.gif';
   static const String accountIcon='assets/images/account_icon.jpeg';
+  static const String beach='assets/images/beach.jpeg';
 
 }

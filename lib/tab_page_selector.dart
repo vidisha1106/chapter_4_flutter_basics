@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 List<Widget> widget = [
-  Icon(Icons.wb_cloudy_outlined),
-  Icon(Icons.beach_access_sharp),
-  Icon(Icons.sunny)
+  const Icon(Icons.wb_cloudy_outlined),
+  const Icon(Icons.beach_access_sharp),
+  const Icon(Icons.sunny)
 ];
 
 class MyTabPageSelector extends StatefulWidget {
@@ -29,8 +29,8 @@ class _MyTabPageSelectorState extends State<MyTabPageSelector>
       ),
       body: Stack(alignment: Alignment.center, children: [
         TabBarView(
-          children: widget,
           controller: tabController,
+          children: widget,
         ),
         Positioned(
           bottom: 25,
@@ -39,7 +39,7 @@ class _MyTabPageSelectorState extends State<MyTabPageSelector>
             color: Colors.white,
             borderStyle: BorderStyle.solid,
             indicatorSize: 18,
-            selectedColor: Color(0xffff4d6d),
+            selectedColor: const Color(0xffff4d6d),
           ),
         ),
       ]),
