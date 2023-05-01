@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class ThemeClass {
 
   static ThemeData lightTheme = ThemeData(
+    //useMaterial3: true,
+    //colorSchemeSeed: Colors.pink[100],
     brightness: Brightness.light,
-    primaryColor: Colors.pink[900],
+    //primaryColor: Colors.pink[900],
     fontFamily: 'Chivo',
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(

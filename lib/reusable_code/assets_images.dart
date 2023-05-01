@@ -11,5 +11,8 @@ class Images{
   static const String gif='assets/images/gif.gif';
   static const String accountIcon='assets/images/account_icon.jpeg';
   static const String beach='assets/images/beach.jpeg';
+  static const String creditCard='assets/images/creditcard.jpeg';
+  static const String upi='assets/images/upi.jpeg';
+  static const String gpay='assets/images/gpay.jpeg';
 
 }

@@ -1,12 +1,15 @@
 import 'package:chapter_4_flutter_basics/MySliverAppBar.dart';
+import 'package:chapter_4_flutter_basics/alert_dialog.dart';
 import 'package:chapter_4_flutter_basics/appbar_widget.dart';
 import 'package:chapter_4_flutter_basics/assets.dart';
 import 'package:chapter_4_flutter_basics/assets_fonts.dart';
 import 'package:chapter_4_flutter_basics/bottom_navigation_bar.dart';
+import 'package:chapter_4_flutter_basics/bottom_sheet.dart';
 import 'package:chapter_4_flutter_basics/column_widget.dart';
 import 'package:chapter_4_flutter_basics/container_widget.dart';
 import 'package:chapter_4_flutter_basics/buttons_widget.dart';
 import 'package:chapter_4_flutter_basics/data_files.dart';
+import 'package:chapter_4_flutter_basics/date_time_picker.dart';
 import 'package:chapter_4_flutter_basics/drawer.dart';
 import 'package:chapter_4_flutter_basics/floating_action_button.dart';
 import 'package:chapter_4_flutter_basics/icon_widget.dart';
@@ -17,7 +20,9 @@ import 'package:chapter_4_flutter_basics/popup_menu_button.dart';
 import 'package:chapter_4_flutter_basics/reusable_code/theme_constants.dart';
 import 'package:chapter_4_flutter_basics/row_widget.dart';
 import 'package:chapter_4_flutter_basics/scaffold_widget.dart';
+import 'package:chapter_4_flutter_basics/simple_dialog.dart';
 import 'package:chapter_4_flutter_basics/slider.dart';
+import 'package:chapter_4_flutter_basics/switch.dart';
 import 'package:chapter_4_flutter_basics/tab_bar.dart';
 import 'package:chapter_4_flutter_basics/tab_page_selector.dart';
 import 'package:chapter_4_flutter_basics/text_widget.dart';
@@ -215,6 +220,26 @@ class _MyHomePageState extends State<MyHomePage> {
                 CustomElevatedButton(
                   title: 'Slider',
                   routeName: MySlider(),
+                ),
+                CustomElevatedButton(
+                  title: 'Switch',
+                  routeName: MySwitch(),
+                ),
+                CustomElevatedButton(
+                  title: 'Date & Time Picker',width: 200,
+                  routeName: MyDateTimePicker(),
+                ),
+                CustomElevatedButton(
+                  title: 'AlertDialog',width: 150,
+                  routeName: MyAlertDialog(),
+                ),
+                CustomElevatedButton(
+                  title: 'SimpleDialog',width: 150,
+                  routeName: MySimpleDialog(),
+                ),
+                CustomElevatedButton(
+                  title: 'BottomSheet',width: 150,
+                  routeName: MyBottomSheet(),
                 ),
               ],
             ),
