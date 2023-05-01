@@ -3,6 +3,7 @@ import 'package:chapter_4_flutter_basics/alert_dialog.dart';
 import 'package:chapter_4_flutter_basics/appbar_widget.dart';
 import 'package:chapter_4_flutter_basics/assets.dart';
 import 'package:chapter_4_flutter_basics/assets_fonts.dart';
+import 'package:chapter_4_flutter_basics/basic_widgets.dart';
 import 'package:chapter_4_flutter_basics/bottom_navigation_bar.dart';
 import 'package:chapter_4_flutter_basics/bottom_sheet.dart';
 import 'package:chapter_4_flutter_basics/column_widget.dart';
@@ -50,55 +51,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeClass.lightTheme,
-      /*ThemeData(
-        brightness: Brightness.light,
-        primaryColor: Colors.pink[900],
-        fontFamily: 'Chivo',
-        textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-              shape: const RoundedRectangleBorder(
-                  side: BorderSide(color: Color(0xffff4d6d), width: 2),
-                  borderRadius: BorderRadius.all(Radius.circular(25))),
-              backgroundColor: const Color(0xfffff0f3),
-              foregroundColor: const Color(0xffff4d6d),
-              textStyle: const TextStyle(fontSize: 17, fontFamily: 'Chivo')),
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            textStyle: const TextStyle(
-              fontFamily: 'Chivo',
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ),*/
       darkTheme: ThemeClass.darkTheme,
-      /*ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Colors.pink[900],
-        fontFamily: 'DynaPuff',
-        textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-              shape: const RoundedRectangleBorder(
-                  side: BorderSide(color: Color(0xfffff0f3), width: 2),
-                  borderRadius: BorderRadius.all(Radius.circular(25))),
-              backgroundColor: const Color(0xffff4d6d),
-              foregroundColor: const Color(0xfffff0f3),
-              textStyle: const TextStyle(fontSize: 17, fontFamily: 'DynaPuff')),
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            textStyle: TextStyle(
-              fontFamily: 'DynaPuff',
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ),*/
       initialRoute: '/home',
       routes: {
         '/home': (context) => MyHomePage(),
@@ -141,6 +94,12 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.only(bottom: 25, top: 25),
             child: Wrap(
               children: [
+                CustomElevatedButton(
+                  title: 'Basic Widgets',
+                  height: 100,
+                  width: 250,
+                  routeName: MyBasicWidgets(),
+                ),
                 CustomElevatedButton(
                     title: 'AppBar', routeName: const MyAppBarWidget()),
                 CustomElevatedButton(
@@ -187,11 +146,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 CustomElevatedButton(
                   title: 'Widget Lifecycle',
-                  routeName: MyWidgetLifecycle(),width: 125,
+                  routeName: MyWidgetLifecycle(),
+                  width: 125,
                 ),
                 CustomElevatedButton(
                   title: 'BottomNavigationBar',
-                  routeName: MyBottomNavigationBar(),width: 250,
+                  routeName: MyBottomNavigationBar(),
+                  width: 250,
                 ),
                 CustomElevatedButton(
                   title: 'Drawer',
@@ -206,15 +167,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   routeName: MyTabPageSelector(),
                 ),
                 CustomElevatedButton(
-                  title: 'SliverAppBar',width: 150,
+                  title: 'SliverAppBar',
+                  width: 150,
                   routeName: MySliverAppBar(),
                 ),
                 CustomElevatedButton(
-                  title: 'FloatingActionButton',width: 225,
+                  title: 'FloatingActionButton',
+                  width: 225,
                   routeName: MyFloatingActionButton(),
                 ),
                 CustomElevatedButton(
-                  title: 'CheckBox',width: 125,
+                  title: 'CheckBox',
+                  width: 125,
                   routeName: MyCheckBox(),
                 ),
                 CustomElevatedButton(
@@ -226,19 +190,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   routeName: MySwitch(),
                 ),
                 CustomElevatedButton(
-                  title: 'Date & Time Picker',width: 200,
+                  title: 'Date & Time Picker',
+                  width: 200,
                   routeName: MyDateTimePicker(),
                 ),
                 CustomElevatedButton(
-                  title: 'AlertDialog',width: 150,
+                  title: 'AlertDialog',
+                  width: 150,
                   routeName: MyAlertDialog(),
                 ),
                 CustomElevatedButton(
-                  title: 'SimpleDialog',width: 150,
+                  title: 'SimpleDialog',
+                  width: 150,
                   routeName: MySimpleDialog(),
                 ),
                 CustomElevatedButton(
-                  title: 'BottomSheet',width: 150,
+                  title: 'BottomSheet',
+                  width: 150,
                   routeName: MyBottomSheet(),
                 ),
               ],
@@ -263,7 +231,7 @@ class CustomElevatedButton extends StatelessWidget {
       this.routeName,
       this.onPressed,
       this.width = 111,
-      this.height = 100});
+      this.height = 75});
 
   @override
   Widget build(BuildContext context) {
