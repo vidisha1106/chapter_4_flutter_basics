@@ -12,6 +12,7 @@ import 'package:chapter_4_flutter_basics/circular_progress_indicator.dart';
 import 'package:chapter_4_flutter_basics/column_widget.dart';
 import 'package:chapter_4_flutter_basics/container_widget.dart';
 import 'package:chapter_4_flutter_basics/buttons_widget.dart';
+import 'package:chapter_4_flutter_basics/cupertino.dart';
 import 'package:chapter_4_flutter_basics/data_files.dart';
 import 'package:chapter_4_flutter_basics/data_table.dart';
 import 'package:chapter_4_flutter_basics/date_time_picker.dart';
@@ -186,6 +187,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 CustomElevatedButton(
                   title: 'Stepper',
                   routeName: MyStepper(),
+                ),
+                CustomElevatedButton(
+                  title: 'Cupertino Widgets',
+                  width: 150,
+                  routeName: MyCupertino(),
                 ),
               ],
             ),

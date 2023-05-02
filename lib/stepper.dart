@@ -43,11 +43,20 @@ class _MyStepperState extends State<MyStepper> {
         },
         steps: [
           Step(
-              title: Text("Step 1 Title"), content: Text("Content for Step 1")),
+              title: Text("Step 1 Title"),
+              content: Text("Content for Step 1"),
+              isActive: index >= 0,
+              state: index >= 0 ? StepState.complete : StepState.disabled),
           Step(
-              title: Text("Step 2 Title"), content: Text("Content for Step 2")),
+              title: Text("Step 2 Title"),
+              content: Text("Content for Step 2"),
+              isActive: index >= 1,
+              state: index >= 1 ? StepState.complete : StepState.disabled),
           Step(
-              title: Text("Step 3 Title"), content: Text("Content for Step 3")),
+              title: Text("Step 3 Title"),
+              content: Text("Content for Step 3"),
+              isActive: index >= 2,
+              state: index >= 2 ? StepState.complete : StepState.disabled),
         ],
       ),
     );
