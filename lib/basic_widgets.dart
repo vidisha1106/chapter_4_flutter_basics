@@ -78,7 +78,6 @@ class _MyBasicWidgetsState extends State<MyBasicWidgets> {
                       title: 'MediaQuery',
                       routeName: const MyMediaQuery(),
                       width: 175),
-
                   CustomElevatedButton(
                     title: 'Assets',
                     routeName: MyAssets(),

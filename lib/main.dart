@@ -6,15 +6,23 @@ import 'package:chapter_4_flutter_basics/assets_fonts.dart';
 import 'package:chapter_4_flutter_basics/basic_widgets.dart';
 import 'package:chapter_4_flutter_basics/bottom_navigation_bar.dart';
 import 'package:chapter_4_flutter_basics/bottom_sheet.dart';
+import 'package:chapter_4_flutter_basics/card.dart';
+import 'package:chapter_4_flutter_basics/chip.dart';
+import 'package:chapter_4_flutter_basics/circular_progress_indicator.dart';
 import 'package:chapter_4_flutter_basics/column_widget.dart';
 import 'package:chapter_4_flutter_basics/container_widget.dart';
 import 'package:chapter_4_flutter_basics/buttons_widget.dart';
 import 'package:chapter_4_flutter_basics/data_files.dart';
+import 'package:chapter_4_flutter_basics/data_table.dart';
 import 'package:chapter_4_flutter_basics/date_time_picker.dart';
+import 'package:chapter_4_flutter_basics/divider.dart';
 import 'package:chapter_4_flutter_basics/drawer.dart';
+import 'package:chapter_4_flutter_basics/expansion_panel.dart';
 import 'package:chapter_4_flutter_basics/floating_action_button.dart';
+import 'package:chapter_4_flutter_basics/grid_view.dart';
 import 'package:chapter_4_flutter_basics/icon_widget.dart';
 import 'package:chapter_4_flutter_basics/image_widget.dart';
+import 'package:chapter_4_flutter_basics/material_widgets.dart';
 import 'package:chapter_4_flutter_basics/media_query.dart';
 import 'package:chapter_4_flutter_basics/placeholder_widget.dart';
 import 'package:chapter_4_flutter_basics/popup_menu_button.dart';
@@ -23,11 +31,13 @@ import 'package:chapter_4_flutter_basics/row_widget.dart';
 import 'package:chapter_4_flutter_basics/scaffold_widget.dart';
 import 'package:chapter_4_flutter_basics/simple_dialog.dart';
 import 'package:chapter_4_flutter_basics/slider.dart';
+import 'package:chapter_4_flutter_basics/stepper.dart';
 import 'package:chapter_4_flutter_basics/switch.dart';
 import 'package:chapter_4_flutter_basics/tab_bar.dart';
 import 'package:chapter_4_flutter_basics/tab_page_selector.dart';
 import 'package:chapter_4_flutter_basics/text_widget.dart';
 import 'package:chapter_4_flutter_basics/textfield_widget.dart';
+import 'package:chapter_4_flutter_basics/tooltip.dart';
 import 'package:chapter_4_flutter_basics/widget_lifecycle.dart';
 import 'package:flutter/material.dart';
 
@@ -101,80 +111,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   routeName: MyBasicWidgets(),
                 ),
                 CustomElevatedButton(
-                    title: 'AppBar', routeName: const MyAppBarWidget()),
-                CustomElevatedButton(
-                    title: 'Column', routeName: const MyColumnWidget()),
-                CustomElevatedButton(
-                    title: 'Scaffold', routeName: const MyScaffold()),
-                CustomElevatedButton(
-                    title: 'Row', routeName: const MyRowWidget()),
-                CustomElevatedButton(
-                    title: 'Text', routeName: const MyTextwidget()),
-                CustomElevatedButton(
-                    title: 'Icon', routeName: const MyIconWidget()),
-                CustomElevatedButton(
-                    title: 'Image', routeName: const MyImageWidget()),
-                CustomElevatedButton(
-                    title: 'Container',
-                    routeName: const MyContainer(),
-                    width: 175),
-                CustomElevatedButton(
-                    title: 'Buttons', routeName: const MyButtons()),
-                CustomElevatedButton(
-                    title: 'Placeholder',
-                    routeName: const MyPlaceholder(),
-                    width: 175),
-                CustomElevatedButton(
-                    title: 'TextField',
-                    routeName: const MyTextField(),
-                    width: 175),
-                CustomElevatedButton(
-                    title: 'MediaQuery',
-                    routeName: const MyMediaQuery(),
-                    width: 175),
-                CustomElevatedButton(
-                  title: 'Assets',
-                  routeName: MyAssets(),
-                ),
-                CustomElevatedButton(
-                  title: 'Fonts',
-                  routeName: MyFonts(),
-                ),
-                CustomElevatedButton(
-                  title: 'Data Files',
-                  routeName: MyDataFiles(),
-                ),
-                CustomElevatedButton(
-                  title: 'Widget Lifecycle',
-                  routeName: MyWidgetLifecycle(),
-                  width: 125,
-                ),
-                CustomElevatedButton(
-                  title: 'BottomNavigationBar',
-                  routeName: MyBottomNavigationBar(),
+                  title: 'Material Widgets',
+                  height: 100,
                   width: 250,
-                ),
-                CustomElevatedButton(
-                  title: 'Drawer',
-                  routeName: MyDrawer(),
-                ),
-                CustomElevatedButton(
-                  title: 'TabBar',
-                  routeName: MyTabBar(),
-                ),
-                CustomElevatedButton(
-                  title: 'TabPageSelector',
-                  routeName: MyTabPageSelector(),
-                ),
-                CustomElevatedButton(
-                  title: 'SliverAppBar',
-                  width: 150,
-                  routeName: MySliverAppBar(),
-                ),
-                CustomElevatedButton(
-                  title: 'FloatingActionButton',
-                  width: 225,
-                  routeName: MyFloatingActionButton(),
+                  routeName: MyMaterialWidgets(),
                 ),
                 CustomElevatedButton(
                   title: 'CheckBox',
@@ -208,6 +148,44 @@ class _MyHomePageState extends State<MyHomePage> {
                   title: 'BottomSheet',
                   width: 150,
                   routeName: MyBottomSheet(),
+                ),
+                CustomElevatedButton(
+                  title: 'Expansion Panel',
+                  width: 150,
+                  routeName: MyExpansionPanel(),
+                ),
+                CustomElevatedButton(
+                  title: 'Card',
+                  routeName: MyCard(),
+                ),
+                CustomElevatedButton(
+                  title: 'Chip',
+                  routeName: MyChip(),
+                ),
+                CustomElevatedButton(
+                  title: 'CircularProgressIndicator',width: 300,
+                  routeName: MyCircularProgressIndicator(),
+                ),
+                CustomElevatedButton(
+                  title: 'DataTable',
+                  width: 125,
+                  routeName: MyDataTable(),
+                ),
+                CustomElevatedButton(
+                  title: 'GridView',
+                  routeName: MyGridView(),
+                ),
+                CustomElevatedButton(
+                  title: 'ToolTip',
+                  routeName: MyToolTip(),
+                ),
+                CustomElevatedButton(
+                  title: 'Divider',
+                  routeName: MyDivider(),
+                ),
+                CustomElevatedButton(
+                  title: 'Stepper',
+                  routeName: MyStepper(),
                 ),
               ],
             ),

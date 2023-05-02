@@ -9,6 +9,8 @@ import 'package:chapter_4_flutter_basics/radio_list_tile_button.dart';
 import 'package:chapter_4_flutter_basics/text_elevated_button.dart';
 import 'package:flutter/material.dart';
 
+import 'floating_action_button.dart';
+
 class MyButtons extends StatefulWidget {
   const MyButtons({Key? key}) : super(key: key);
 
@@ -38,6 +40,11 @@ class _MyButtons extends State<MyButtons> {
             CustomElevatedButton(title: 'RadioButton', routeName: const MyRadioButton(),width: 300, height: 65),
             CustomElevatedButton(title: 'RadioListTileButton', routeName: const MyRadioListTile(),width: 300, height: 65),
             CustomElevatedButton(title: 'PopUpMenuButtton', routeName: MyPopUpMenuButton(),width: 300, height: 65),
+            CustomElevatedButton(
+              title: 'FloatingActionButton',
+              width: 300,height: 65,
+              routeName: MyFloatingActionButton(),
+            ),
             // CustomElevatedButton(title: 'Buttons', routeName: const MyButtons()),
           ],
         ),

@@ -14,5 +14,6 @@ class Images{
   static const String creditCard='assets/images/creditcard.jpeg';
   static const String upi='assets/images/upi.jpeg';
   static const String gpay='assets/images/gpay.jpeg';
+  static const String unstoppable='assets/images/unstoppable.jpeg';
 
 }
