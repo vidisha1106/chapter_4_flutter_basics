@@ -20,6 +20,7 @@ class _MyStepperState extends State<MyStepper> {
         elevation: 0,
       ),
       body: Stepper(
+        physics: NeverScrollableScrollPhysics(),
         elevation: 25,
         currentStep: index,
         onStepCancel: () {
@@ -43,19 +44,19 @@ class _MyStepperState extends State<MyStepper> {
         },
         steps: [
           Step(
-              title: Text("Step 1 Title"),
-              content: Text("Content for Step 1"),
-              isActive: index >= 0,
+              title: const Text("Step 1 Title"),
+              content: const Text("Content for Step 1"),
+              isActive: index > 0,
               state: index >= 0 ? StepState.complete : StepState.disabled),
           Step(
-              title: Text("Step 2 Title"),
-              content: Text("Content for Step 2"),
-              isActive: index >= 1,
+              title: const Text("Step 2 Title"),
+              content: const Text("Content for Step 2"),
+              isActive: index > 1,
               state: index >= 1 ? StepState.complete : StepState.disabled),
           Step(
-              title: Text("Step 3 Title"),
-              content: Text("Content for Step 3"),
-              isActive: index >= 2,
+              title: const Text("Step 3 Title"),
+              content: const Text("Content for Step 3"),
+              isActive: index > 2,
               state: index >= 2 ? StepState.complete : StepState.disabled),
         ],
       ),

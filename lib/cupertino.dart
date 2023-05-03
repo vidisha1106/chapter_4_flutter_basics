@@ -1,3 +1,6 @@
+import 'package:chapter_4_flutter_basics/action_sheet.dart';
+import 'package:chapter_4_flutter_basics/cupertino_alert_dialog.dart';
+import 'package:chapter_4_flutter_basics/main.dart';
 import 'package:chapter_4_flutter_basics/text_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,13 +23,19 @@ class _MyCupertinoState extends State<MyCupertino> {
         elevation: 0,
       ),
       body: Center(
-        child: CustomTextButton(
-            title: "Show Cupertino Action Sheet", onPressed: () {
-              /*showCupertinoModalPopup(context: context, builder: (context) {
-                return Cupertino
-              },*/
-        }),
-      ),
+          child: Wrap(
+              alignment: WrapAlignment.center,
+              direction: Axis.vertical,
+              children: [
+            CustomElevatedButton(
+              title: 'Action Sheet',
+              routeName: MyActionSheet(),
+            ),
+            CustomElevatedButton(
+              title: 'Alert Dialog',
+              routeName: MyCupertinoAlertDialog(),
+            ),
+          ])),
     );
   }
 }

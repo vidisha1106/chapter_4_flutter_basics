@@ -6,6 +6,7 @@ import 'package:chapter_4_flutter_basics/assets_fonts.dart';
 import 'package:chapter_4_flutter_basics/basic_widgets.dart';
 import 'package:chapter_4_flutter_basics/bottom_navigation_bar.dart';
 import 'package:chapter_4_flutter_basics/bottom_sheet.dart';
+import 'package:chapter_4_flutter_basics/builders.dart';
 import 'package:chapter_4_flutter_basics/card.dart';
 import 'package:chapter_4_flutter_basics/chip.dart';
 import 'package:chapter_4_flutter_basics/circular_progress_indicator.dart';
@@ -23,19 +24,23 @@ import 'package:chapter_4_flutter_basics/floating_action_button.dart';
 import 'package:chapter_4_flutter_basics/grid_view.dart';
 import 'package:chapter_4_flutter_basics/icon_widget.dart';
 import 'package:chapter_4_flutter_basics/image_widget.dart';
+import 'package:chapter_4_flutter_basics/listview.dart';
 import 'package:chapter_4_flutter_basics/material_widgets.dart';
 import 'package:chapter_4_flutter_basics/media_query.dart';
+import 'package:chapter_4_flutter_basics/pageview.dart';
 import 'package:chapter_4_flutter_basics/placeholder_widget.dart';
 import 'package:chapter_4_flutter_basics/popup_menu_button.dart';
 import 'package:chapter_4_flutter_basics/reusable_code/theme_constants.dart';
 import 'package:chapter_4_flutter_basics/row_widget.dart';
 import 'package:chapter_4_flutter_basics/scaffold_widget.dart';
+import 'package:chapter_4_flutter_basics/scrollview.dart';
 import 'package:chapter_4_flutter_basics/simple_dialog.dart';
 import 'package:chapter_4_flutter_basics/slider.dart';
 import 'package:chapter_4_flutter_basics/stepper.dart';
 import 'package:chapter_4_flutter_basics/switch.dart';
 import 'package:chapter_4_flutter_basics/tab_bar.dart';
 import 'package:chapter_4_flutter_basics/tab_page_selector.dart';
+import 'package:chapter_4_flutter_basics/table.dart';
 import 'package:chapter_4_flutter_basics/text_widget.dart';
 import 'package:chapter_4_flutter_basics/textfield_widget.dart';
 import 'package:chapter_4_flutter_basics/tooltip.dart';
@@ -192,6 +197,26 @@ class _MyHomePageState extends State<MyHomePage> {
                   title: 'Cupertino Widgets',
                   width: 150,
                   routeName: MyCupertino(),
+                ),
+                CustomElevatedButton(
+                  title: 'Builders',
+                  routeName: MyBuilders(),
+                ),
+                CustomElevatedButton(
+                  title: 'ListView',
+                  routeName: MyListView(),
+                ),
+                CustomElevatedButton(
+                  title: 'Table',
+                  routeName: MyTable(),
+                ),
+                CustomElevatedButton(
+                  title: 'PageView',width: 125,
+                  routeName: MyPageView(),
+                ),
+                CustomElevatedButton(
+                  title: 'ScrollView',width: 125,
+                  routeName: MyScrollView(),
                 ),
               ],
             ),

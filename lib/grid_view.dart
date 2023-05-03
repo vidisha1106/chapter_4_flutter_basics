@@ -34,6 +34,7 @@ class _MyGridViewState extends State<MyGridView> {
       body: GridView.count(
         crossAxisCount: 3,
         mainAxisSpacing: 10,
+        physics: NeverScrollableScrollPhysics(),
         crossAxisSpacing: 10,
         children: List.generate(
           allColors.length,
