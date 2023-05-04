@@ -11,12 +11,7 @@ class _MyFontsState extends State<MyFonts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color(0xffff4d6d),
-          centerTitle: true,
-          title: const Text("Fonts", style: TextStyle(fontSize: 25)),
-          elevation: 0,
-        ),
+      appBar: AppBar(title: Text("Fonts")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

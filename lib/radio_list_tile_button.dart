@@ -17,13 +17,7 @@ class _MyRadioListTileState extends State<MyRadioListTile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("RadioListTileButton",
-            style: TextStyle(fontSize: 25, color: Colors.white)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("RadioLIstTileButton ")),
       body: Theme(
         data: ThemeData(unselectedWidgetColor: Color(0xfff8bbd0)),
         child: Column(

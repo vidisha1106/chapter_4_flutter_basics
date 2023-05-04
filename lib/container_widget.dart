@@ -26,13 +26,7 @@ class _MyContainerState extends State<MyContainer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Container",
-            style: TextStyle(fontSize: 25, color: Colors.white)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Container")),
       body: Column(
         children: [
           Container(

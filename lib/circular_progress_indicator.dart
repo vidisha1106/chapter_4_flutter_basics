@@ -11,12 +11,7 @@ class _MyCircularProgressIndicatorState extends State<MyCircularProgressIndicato
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("CircularProgressIndicator", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Progress Indicator")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

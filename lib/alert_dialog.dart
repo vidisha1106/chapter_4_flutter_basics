@@ -12,12 +12,7 @@ class _MyAlertDialogState extends State<MyAlertDialog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("AlertDialog", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("AlertDialog")),
       body: Center(
         child: CustomTextButton(
           title: 'Show AlertDialog',

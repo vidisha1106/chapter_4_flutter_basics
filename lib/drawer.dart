@@ -26,12 +26,7 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Drawer", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Drawer")),
       drawer: Drawer(
         child: ListView(
           children: [

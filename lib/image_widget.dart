@@ -19,13 +19,7 @@ class _MyImageWidgetState extends State<MyImageWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Image",
-            style: TextStyle(fontSize: 25, color: Colors.white)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Image")),
       body: Wrap(
         children: [Column(
           children: [

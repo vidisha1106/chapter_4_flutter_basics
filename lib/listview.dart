@@ -15,12 +15,7 @@ class _MyListViewState extends State<MyListView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("ListView", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("ListView")),
       body: ListView.separated(
         itemCount: entries.length,
         physics: const BouncingScrollPhysics(),

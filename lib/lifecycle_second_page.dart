@@ -15,12 +15,7 @@ class _MySecondPageState extends State<MySecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Second Page", style: TextStyle(fontSize: 25)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Second Page")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

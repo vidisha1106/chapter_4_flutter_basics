@@ -11,13 +11,7 @@ class _MyFloatingActionButtonState extends State<MyFloatingActionButton> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color(0xffff4d6d),
-          centerTitle: true,
-          title: const Text("FloatingActionButton",
-              style: TextStyle(fontSize: 20)),
-          elevation: 0,
-        ),
+        appBar: AppBar(title: Text("FloatingActionButton")),
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

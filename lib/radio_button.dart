@@ -15,13 +15,7 @@ class _MyRadioButtonState extends State<MyRadioButton> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("RadioButton",
-            style: TextStyle(fontSize: 25, color: Colors.white)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("RadioButton")),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           ListTile(

@@ -23,13 +23,7 @@ class _MyDropDownButtonState extends State<MyDropDownButton> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color(0xffff4d6d),
-          centerTitle: true,
-          title: const Text("DropDownButton",
-              style: TextStyle(fontSize: 25, color: Colors.white)),
-          elevation: 0,
-        ),
+        appBar: AppBar(title: Text("DropDownButton")),
         body: Center(
           child: DecoratedBox(
             decoration: BoxDecoration(

@@ -14,12 +14,7 @@ class _MyAssetsState extends State<MyAssets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Assets", style: TextStyle(fontSize: 25)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Assets")),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

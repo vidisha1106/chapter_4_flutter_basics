@@ -99,12 +99,7 @@ class _MyDataFilesState extends State<MyDataFiles> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Data Files", style: TextStyle(fontSize: 25)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Data Files")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

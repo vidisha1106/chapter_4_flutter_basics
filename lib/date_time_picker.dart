@@ -15,12 +15,7 @@ class _MyDateTimePickerState extends State<MyDateTimePicker> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Date & Time Picker", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Date & Time Picker")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,54 +1,13 @@
-import 'package:chapter_4_flutter_basics/MySliverAppBar.dart';
-import 'package:chapter_4_flutter_basics/alert_dialog.dart';
 import 'package:chapter_4_flutter_basics/appbar_widget.dart';
-import 'package:chapter_4_flutter_basics/assets.dart';
-import 'package:chapter_4_flutter_basics/assets_fonts.dart';
 import 'package:chapter_4_flutter_basics/basic_widgets.dart';
-import 'package:chapter_4_flutter_basics/bottom_navigation_bar.dart';
-import 'package:chapter_4_flutter_basics/bottom_sheet.dart';
 import 'package:chapter_4_flutter_basics/builders.dart';
-import 'package:chapter_4_flutter_basics/card.dart';
-import 'package:chapter_4_flutter_basics/chip.dart';
-import 'package:chapter_4_flutter_basics/circular_progress_indicator.dart';
-import 'package:chapter_4_flutter_basics/column_widget.dart';
-import 'package:chapter_4_flutter_basics/container_widget.dart';
-import 'package:chapter_4_flutter_basics/buttons_widget.dart';
 import 'package:chapter_4_flutter_basics/cupertino.dart';
-import 'package:chapter_4_flutter_basics/data_files.dart';
-import 'package:chapter_4_flutter_basics/data_table.dart';
-import 'package:chapter_4_flutter_basics/date_time_picker.dart';
-import 'package:chapter_4_flutter_basics/divider.dart';
-import 'package:chapter_4_flutter_basics/drawer.dart';
-import 'package:chapter_4_flutter_basics/expansion_panel.dart';
-import 'package:chapter_4_flutter_basics/floating_action_button.dart';
-import 'package:chapter_4_flutter_basics/grid_view.dart';
-import 'package:chapter_4_flutter_basics/icon_widget.dart';
-import 'package:chapter_4_flutter_basics/image_widget.dart';
-import 'package:chapter_4_flutter_basics/listview.dart';
+import 'package:chapter_4_flutter_basics/helper_widgets.dart';
 import 'package:chapter_4_flutter_basics/material_widgets.dart';
-import 'package:chapter_4_flutter_basics/media_query.dart';
-import 'package:chapter_4_flutter_basics/pageview.dart';
-import 'package:chapter_4_flutter_basics/placeholder_widget.dart';
-import 'package:chapter_4_flutter_basics/popup_menu_button.dart';
+import 'package:chapter_4_flutter_basics/pinch_gesture_detector.dart';
 import 'package:chapter_4_flutter_basics/reusable_code/theme_constants.dart';
-import 'package:chapter_4_flutter_basics/row_widget.dart';
-import 'package:chapter_4_flutter_basics/scaffold_widget.dart';
-import 'package:chapter_4_flutter_basics/scrollview.dart';
-import 'package:chapter_4_flutter_basics/simple_dialog.dart';
-import 'package:chapter_4_flutter_basics/slider.dart';
-import 'package:chapter_4_flutter_basics/stepper.dart';
-import 'package:chapter_4_flutter_basics/switch.dart';
-import 'package:chapter_4_flutter_basics/tab_bar.dart';
-import 'package:chapter_4_flutter_basics/tab_page_selector.dart';
-import 'package:chapter_4_flutter_basics/table.dart';
-import 'package:chapter_4_flutter_basics/text_widget.dart';
-import 'package:chapter_4_flutter_basics/textfield_widget.dart';
-import 'package:chapter_4_flutter_basics/tooltip.dart';
-import 'package:chapter_4_flutter_basics/widget_lifecycle.dart';
+import 'package:chapter_4_flutter_basics/scrollable_widgets.dart';
 import 'package:flutter/material.dart';
-
-import 'checkbox.dart';
-import 'popup_menu_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -97,105 +56,27 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Flutter CookBook",
-            style: TextStyle(fontSize: 25, color: Colors.white)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Flutter CookBook")),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 25, top: 25),
-            child: Wrap(
+            padding: const EdgeInsets.symmetric(
+              vertical: 25,
+              horizontal: 25,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 CustomElevatedButton(
                   title: 'Basic Widgets',
-                  height: 100,
-                  width: 250,
                   routeName: MyBasicWidgets(),
                 ),
                 CustomElevatedButton(
                   title: 'Material Widgets',
-                  height: 100,
-                  width: 250,
                   routeName: MyMaterialWidgets(),
                 ),
                 CustomElevatedButton(
-                  title: 'CheckBox',
-                  width: 125,
-                  routeName: MyCheckBox(),
-                ),
-                CustomElevatedButton(
-                  title: 'Slider',
-                  routeName: MySlider(),
-                ),
-                CustomElevatedButton(
-                  title: 'Switch',
-                  routeName: MySwitch(),
-                ),
-                CustomElevatedButton(
-                  title: 'Date & Time Picker',
-                  width: 200,
-                  routeName: MyDateTimePicker(),
-                ),
-                CustomElevatedButton(
-                  title: 'AlertDialog',
-                  width: 150,
-                  routeName: MyAlertDialog(),
-                ),
-                CustomElevatedButton(
-                  title: 'SimpleDialog',
-                  width: 150,
-                  routeName: MySimpleDialog(),
-                ),
-                CustomElevatedButton(
-                  title: 'BottomSheet',
-                  width: 150,
-                  routeName: MyBottomSheet(),
-                ),
-                CustomElevatedButton(
-                  title: 'Expansion Panel',
-                  width: 150,
-                  routeName: MyExpansionPanel(),
-                ),
-                CustomElevatedButton(
-                  title: 'Card',
-                  routeName: MyCard(),
-                ),
-                CustomElevatedButton(
-                  title: 'Chip',
-                  routeName: MyChip(),
-                ),
-                CustomElevatedButton(
-                  title: 'CircularProgressIndicator',width: 300,
-                  routeName: MyCircularProgressIndicator(),
-                ),
-                CustomElevatedButton(
-                  title: 'DataTable',
-                  width: 125,
-                  routeName: MyDataTable(),
-                ),
-                CustomElevatedButton(
-                  title: 'GridView',
-                  routeName: MyGridView(),
-                ),
-                CustomElevatedButton(
-                  title: 'ToolTip',
-                  routeName: MyToolTip(),
-                ),
-                CustomElevatedButton(
-                  title: 'Divider',
-                  routeName: MyDivider(),
-                ),
-                CustomElevatedButton(
-                  title: 'Stepper',
-                  routeName: MyStepper(),
-                ),
-                CustomElevatedButton(
                   title: 'Cupertino Widgets',
-                  width: 150,
                   routeName: MyCupertino(),
                 ),
                 CustomElevatedButton(
@@ -203,20 +84,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   routeName: MyBuilders(),
                 ),
                 CustomElevatedButton(
-                  title: 'ListView',
-                  routeName: MyListView(),
+                  title: 'Scrollable Widgets',
+                  routeName: MyScrollableWidgets(),
                 ),
                 CustomElevatedButton(
-                  title: 'Table',
-                  routeName: MyTable(),
+                  title: 'Helper Widgets',
+                  routeName: MyHelperWidgets(),
                 ),
                 CustomElevatedButton(
-                  title: 'PageView',width: 125,
-                  routeName: MyPageView(),
-                ),
-                CustomElevatedButton(
-                  title: 'ScrollView',width: 125,
-                  routeName: MyScrollView(),
+                  title: 'Gesture Detector',
+                  routeName: PinchGestureDetector(),
                 ),
               ],
             ),

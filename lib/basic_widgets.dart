@@ -28,12 +28,7 @@ class _MyBasicWidgetsState extends State<MyBasicWidgets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Basic Widgets", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Basic Widgets")),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top: 50),
@@ -42,53 +37,53 @@ class _MyBasicWidgetsState extends State<MyBasicWidgets> {
               alignment: WrapAlignment.center,
                 children: [
                   CustomElevatedButton(
-                      title: 'AppBar', routeName: const MyAppBarWidget()),
+                      title: 'AppBar', routeName: const MyAppBarWidget(),height: 60),
                   CustomElevatedButton(
-                      title: 'Column', routeName: const MyColumnWidget()),
+                      title: 'Column', routeName: const MyColumnWidget(),height: 60),
                   CustomElevatedButton(
                       title: 'Container',
-                      routeName: const MyContainer(),
+                      routeName: const MyContainer(),height: 60,
                       width: 150),
                   CustomElevatedButton(
-                      title: 'Buttons', routeName: const MyButtons()),
+                      title: 'Buttons', routeName: const MyButtons(),height: 60),
                   CustomElevatedButton(
-                      title: 'Icon', routeName: const MyIconWidget()),
+                      title: 'Icon', routeName: const MyIconWidget(),height: 60),
                   CustomElevatedButton(
-                      title: 'Image', routeName: const MyImageWidget()),
+                      title: 'Image', routeName: const MyImageWidget(),height: 60),
                   CustomElevatedButton(
                       title: 'Placeholder',
                       routeName: const MyPlaceholder(),
-                      width: 150),
+                      width: 150,height: 60),
                   CustomElevatedButton(
-                      title: 'Row', routeName: const MyRowWidget()),
+                      title: 'Row', routeName: const MyRowWidget(),height: 60),
                   CustomElevatedButton(
-                      title: 'Scaffold', routeName: const MyScaffold()),
+                      title: 'Scaffold', routeName: const MyScaffold(),height: 60),
                   CustomElevatedButton(
-                      title: 'Text', routeName: const MyTextwidget()),
+                      title: 'Text', routeName: const MyTextwidget(),height: 60),
                   CustomElevatedButton(
                       title: 'TextField',
-                      routeName: const MyTextField(),
+                      routeName: const MyTextField(),height: 60,
                       width: 175),
                   CustomElevatedButton(
                     title: 'Widget Lifecycle',
-                    routeName: MyWidgetLifecycle(),
-                    width: 125,
+                    routeName: MyWidgetLifecycle(),height: 60,
+                    width: 200,
                   ),
                   CustomElevatedButton(
                       title: 'MediaQuery',
-                      routeName: const MyMediaQuery(),
-                      width: 175),
+                      routeName: const MyMediaQuery(),height: 60,
+                      width: 150 ),
                   CustomElevatedButton(
                     title: 'Assets',
-                    routeName: MyAssets(),
+                    routeName: MyAssets(),height: 60,
                   ),
                   CustomElevatedButton(
                     title: 'Fonts',
-                    routeName: MyFonts(),
+                    routeName: MyFonts(),height: 60,
                   ),
                   CustomElevatedButton(
                     title: 'Data Files',
-                    routeName: MyDataFiles(),
+                    routeName: MyDataFiles(),height: 60,width: 125,
                   ),
                 ],
             ),

@@ -16,23 +16,18 @@ class _MyCupertinoState extends State<MyCupertino> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Cupertino Widgets", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Cupertino Widgets")),
       body: Center(
           child: Wrap(
               alignment: WrapAlignment.center,
               direction: Axis.vertical,
               children: [
             CustomElevatedButton(
-              title: 'Action Sheet',
+              title: 'Action Sheet',height: 60,width: 150,
               routeName: MyActionSheet(),
             ),
             CustomElevatedButton(
-              title: 'Alert Dialog',
+              title: 'Alert Dialog',height: 60,width: 150,
               routeName: MyCupertinoAlertDialog(),
             ),
           ])),

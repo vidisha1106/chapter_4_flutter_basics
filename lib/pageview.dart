@@ -17,12 +17,6 @@ class _MyPageViewState extends State<MyPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("PageView", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),*/
       body: PageView(
         scrollDirection: Axis.vertical,
         allowImplicitScrolling: true,

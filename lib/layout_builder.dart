@@ -11,12 +11,7 @@ class _MyLayoutBuilderState extends State<MyLayoutBuilder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Layout Builder", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Layout Builder")),
       body: LayoutBuilder(
         builder: (buildContext, boxConstraints) {
           if(boxConstraints.maxWidth<=500){

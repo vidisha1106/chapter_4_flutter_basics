@@ -11,12 +11,7 @@ class _MyDataTableState extends State<MyDataTable> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("DataTable", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Data Table")),
       body: DataTable(columns: const [
         DataColumn(label: Text('Name'), numeric: true),
         DataColumn(label: Text('Technology')),

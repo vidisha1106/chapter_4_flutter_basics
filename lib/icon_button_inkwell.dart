@@ -13,13 +13,7 @@ class _MyIconInkWellState extends State<MyIconInkWell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("IconButton & InkWell ",
-            style: TextStyle(fontSize: 20, color: Colors.white)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("IconButton & InkWell")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

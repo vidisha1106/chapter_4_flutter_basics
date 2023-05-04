@@ -59,12 +59,7 @@ class _MyChipState extends State<MyChip> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Chip", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Chip")),
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -12,12 +12,7 @@ class _MyDividerState extends State<MyDivider> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Divider", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Divider")),
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Container(color: Colors.teal, width: 100, height: 100),
         const Divider(
@@ -43,13 +38,15 @@ class _MyDividerState extends State<MyDivider> {
                 width: 50,
                 height: 50,
               ),
-              const VerticalDivider(thickness: 2, color: Colors.black, width: 25),
+              const VerticalDivider(
+                  thickness: 2, color: Colors.black, width: 25),
               Image.asset(
                 Images.creditCard,
                 width: 50,
                 height: 50,
               ),
-              const VerticalDivider(color: Colors.black, thickness:2, width: 25),
+              const VerticalDivider(
+                  color: Colors.black, thickness: 2, width: 25),
               Image.asset(
                 Images.gpay,
                 width: 50,

@@ -8,7 +8,6 @@ import 'package:chapter_4_flutter_basics/radio_button.dart';
 import 'package:chapter_4_flutter_basics/radio_list_tile_button.dart';
 import 'package:chapter_4_flutter_basics/text_elevated_button.dart';
 import 'package:flutter/material.dart';
-
 import 'floating_action_button.dart';
 
 class MyButtons extends StatefulWidget {
@@ -22,13 +21,7 @@ class _MyButtons extends State<MyButtons> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Buttons",
-            style: TextStyle(fontSize: 20, color: Colors.white)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("Buttons")),
       body: Center(
         child: Wrap(
           children: [

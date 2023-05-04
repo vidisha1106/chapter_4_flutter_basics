@@ -28,12 +28,7 @@ class _MyColumnWidgetState extends State<MyColumnWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        title: const Text("Column"),
-        centerTitle: true,
-        backgroundColor: Color(0xffff4d6d),
-      ),
+      appBar: AppBar(title: Text("Column")),
       body: Wrap(
         children:[ Column(
           children: [

@@ -13,12 +13,7 @@ class _MyActionSheetState extends State<MyActionSheet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xffff4d6d),
-        centerTitle: true,
-        title: const Text("Action Sheet", style: TextStyle(fontSize: 20)),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: Text("ActionSheet")),
       body: Center(
         child: CustomTextButton(
           title: 'Show Cupertino ActionSheet',
